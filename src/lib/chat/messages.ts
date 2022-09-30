@@ -1,6 +1,9 @@
 import {readable} from 'svelte/store';
-import {KeyPair, Session, wasm} from 'p2panda-js';
+import type {KeyPair} from 'p2panda-js';
+import p2panda from 'p2panda-js';
 import {CHAT_SCHEMA, ENDPOINT} from './configs';
+
+const {Session, wasm} = p2panda;
 
 const session = new Session(ENDPOINT);
 
